@@ -1,0 +1,114 @@
+<meta charset="uft-8">
+<script type="text/javascript">
+
+    /*//Задание 1.a
+    function arrFunction(n) {
+        var arrN = [];
+        for (var i = 1; i <= n; i++) {
+            arrN.push(i);
+        }
+        return arrN;
+    }
+
+    alert("Задание 1.a. Массив из N элементов: " + arrFunction(+prompt("Задание 1.а Введите число n")));
+
+    //Задание 1.b
+
+    function sumArr(arrUserB) {
+
+        var sum = 0;
+
+        for (var i = 0; i <= arrUserB.length - 1; i++) {
+            sum += arrUserB[i];
+        }
+        return sum;
+    }
+
+    var i = 0;
+    var arrUserB = [];
+
+    do {
+     var userNumber =  prompt("Задание 1.b Введите массив чисел. В конце массива, введите end");
+    if(userNumber === "end"){
+          break;
+      }
+        arrUserB.push(parseInt(userNumber));
+        i++;
+
+    }
+    while (true)
+    {
+
+    }
+
+    alert("Задание 1.b. Сумма массива равна: " + sumArr(arrUserB));*/
+
+    //Задание 1.c
+
+    /*function searchMax(arrUserC) {
+
+        var max = 0;
+
+        for (var i = 0; i <= arrUserC.length - 1; i++) {
+            if (arrUserC[i] > max) {
+                max = arrUserC[i];
+            }
+        }
+        return max;
+    }
+
+    i = 0;
+    var arrUserC = [];
+
+    do {
+        var userNumber = prompt("Задание 1.c Введите массив чисел. В конце массива, введите end");
+        if (userNumber === "end") {
+            break;
+        } else {
+            arrUserC.push(parseInt(userNumber));
+            i++;
+        }
+    }
+    while (true)
+    {
+
+    }
+
+    alert("Задание 1.c. Максимальное, целое число в массиве: " + searchMax(arrUserC));*/
+
+    //Задание 1.d
+
+    function searchMin(arrUserD) {
+
+        var min = 2147483647;
+
+        for (var i = 0; i <= arrUserD.length - 1; i++) {
+            if(arrUserD[i] < min ){
+                min = arrUserD[i];
+            }
+        }
+        return min;
+    }
+
+    i = 0;
+    var arrUserD = [];
+
+    var userNumber;
+    do {
+        userNumber = prompt("Задание 1.d Введите массив чисел. В конце массива, введите end");
+        if (userNumber === "end") {
+            break;
+        } else {
+            arrUserD.push(parseInt(userNumber));
+            i++;
+        }
+    }
+    while (true)
+    {
+
+    }
+
+    alert("Задание 1.c. Минимальное, целое число в массиве: " + searchMin(arrUserD));
+
+
+</script>
