@@ -1,0 +1,29 @@
+<meta charset="uft-8">
+        <script type="text/javascript">
+
+var answer = 5;
+var player1Answer = "";
+var player2Answer = "";
+
+do{
+    var player1Answer = prompt("Ход первого игрока.\nУгадайте число от 0 до 100\nДля выхода из игры введите exit");
+    if(player1Answer === "Exit" || player1Answer === "exit"){
+        break;
+    }else if(player1Answer != answer){
+        alert("Не верно! Ход переходит другому игроку.");
+        var player2Answer = prompt("Ход второго игрока.\nУгадайте число от 0 до 100\nДля выхода из игры введите exit");
+        if(player2Answer === "Exit" || player2Answer === "exit")
+        break;
+        else if(player2Answer != answer)
+        alert("Не верно! Ход переходит другому игроку.");
+    }
+}while(player1Answer === answer || player2Answer === answer){
+
+}
+if(player1Answer === "Exit" || player1Answer === "exit" || player2Answer === "Exit" || player2Answer === "exit")
+alert("Вы вышли из игры.");
+else if(parseInt(player1Answer) === answer)
+alert("Игра окончена, победил первый игрок");
+else if(parseInt(player2Answer) === answer)
+alert("Игра окончена, победил второй игрок");
+        </script>

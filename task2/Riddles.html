@@ -1,0 +1,45 @@
+<meta charset="uft-8">
+        <script type="text/javascript">
+
+var countCorrectAnswer = 0;
+
+var userAnswer = prompt("Отгадайте загадку.\n\nКто грызёт на ветке шишку?\nНу, конечно, это ... ");
+
+if(userAnswer === 'Белка' || userAnswer === 'белка' || userAnswer === 'белочка' || userAnswer === 'Белочка'){
+alert("Поздравляем, вы угадали!")
+countCorrectAnswer++;
+}else{
+    alert("Вы не угадали.")
+}
+
+var userAnswer = prompt("Отгадайте ещё одну загадку.\n\nНочью каждое оконце\nСлабо освещает ... ");
+
+if(userAnswer === 'луна' || userAnswer === 'Луна'){
+alert("Поздравляем, вы угадали!")
+countCorrectAnswer++;
+}else{
+    alert("Вы не угадали.")
+}
+
+var userAnswer = prompt("Отгадайте ещё одну загадку.\n\nКукарекает спросонок\nМилый, добрый ... ");
+
+if(userAnswer === 'петух' || userAnswer === 'Петух'){
+alert("Поздравляем, вы угадали!")
+countCorrectAnswer++;
+}else{
+    alert("Вы не угадали.")
+}
+
+var userAnswer = prompt("Отгадайте ещё одну загадку.\n\nПо волнам дворец плывет,\nНа себе людей везет.");
+
+if(userAnswer === 'Корабль' || userAnswer === 'корабль' || userAnswer === 'теплоход' || userAnswer === 'Теплоход'){
+alert("Поздравляем, вы угадали!")
+countCorrectAnswer++;
+}else{
+    alert("Вы не угадали.")
+}
+
+alert("Игра окончена. Количество правильных ответов: " + countCorrectAnswer)
+
+
+        </script>
