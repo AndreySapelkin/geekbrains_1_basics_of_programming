@@ -1,35 +1,52 @@
 <meta charset="uft-8">
-        <script type="text/javascript">
+<script type="text/javascript">
 
-function generateText(letters, length){
-    var text = "";
-    for(var i = 0; i < length; i++){
+    function generateText(letters, length) {
+        var text = "";
+        for (var i = 0; i < length; i++) {
             text = text + letters[getRandomNumber(letters.length - 1)];
+        }
+        return text;
     }
-    return "фаафафаффффаааффаа";
-}
 
-function getRandomNumber(max){
-    return Math.round(Math.random() * max);
-}
+    function getRandomNumber(max) {
+        return parseInt(Math.random() * (max + 1));
+    }
 
-alert("Вас приветствует программа по обучению слепой печати");
+    function keySelectionAndLearning(arrKey) {
+        while (true) {
 
-while(true){
+            var text = generateText(arrKey, 10);
+            var userText = prompt(text);
+            if (userText === text) {
+                alert("Все верно")
+                break;
+            } else {
+                alert("Вы ошиблись. Попробуйте ещё раз");
+            }
+        }
+    }
 
+    alert("Вас приветствует программа по обучению слепой печати");
 
     alert("Положите 4 пальца левой руки - мизинец, безымянный, средний и указательный - на клавиши ф, ы, в, а. " +
-            "Запомните, что буква А находится под вашим указательным пальцем, а Ф - под мизинцем.\n" +
-            "Теперь неспешна набирайте текст. Постарайтесь не смотреть на клавиатуру");
+        "Запомните, что буква А находится под вашим указательным пальцем, а Ф - под мизинцем.\n" +
+        "Теперь неспешна набирайте текст. Постарайтесь не смотреть на клавиатуру");
 
-    var text = generateText(["ф", "а"], 10);
-    var userText = prompt(text);
-    if(userText === text){
-        alert("Все верно")
-        break;
-    } else{
-        alert("Вы ошиблись. Попробуйте ещё раз");
-        }
-}
+    keySelectionAndLearning(['ф', 'а']);
 
-        </script>
+    alert("Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А." +
+        " Мизинец правой руки на букву Ж, безымянный палец — на Д, средний — на Л, указательный — на О." +
+        " Запомните расположение пальцев. Повторяйте за мной");
+
+    keySelectionAndLearning(["ы", "в"]);
+
+    alert("Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. " +
+        "Мизинец правой руки на букву Ж, безымянный палец — на Д, средний -— на Л, указательный — на О." +
+        " Запомните расположение пальцев");
+
+    keySelectionAndLearning(["о", "ж"]);
+
+    alert("Поздравляем, вы выполнили правильно, все задания!");
+
+</script>
