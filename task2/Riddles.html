@@ -1,45 +1,35 @@
 <meta charset="uft-8">
-        <script type="text/javascript">
+<script type="text/javascript">
 
-var countCorrectAnswer = 0;
+    var countCorrectAnswer = 0;
+    var flag = 0;
 
-var userAnswer = prompt("Отгадайте загадку.\n\nКто грызёт на ветке шишку?\nНу, конечно, это ... ");
+    function ridless(textRidless, arrAnswer) {
 
-if(userAnswer === 'Белка' || userAnswer === 'белка' || userAnswer === 'белочка' || userAnswer === 'Белочка'){
-alert("Поздравляем, вы угадали!")
-countCorrectAnswer++;
-}else{
-    alert("Вы не угадали.")
-}
+        var userAnswer = prompt("Отгадайте загадку.\n\n" + textRidless);
+        for (var i = 0; i < arrAnswer.length; i++) {
+            if (userAnswer === arrAnswer[i]) {
+                countCorrectAnswer++;
+                alert("Поздравляем, вы угадали!");
+                flag = 1;
+                break;
+            }
+        }
+        if (flag === 0) {
+            alert("Вы не угадали. Попробуйте ещё.");
+        }
 
-var userAnswer = prompt("Отгадайте ещё одну загадку.\n\nНочью каждое оконце\nСлабо освещает ... ");
+    }
 
-if(userAnswer === 'луна' || userAnswer === 'Луна'){
-alert("Поздравляем, вы угадали!")
-countCorrectAnswer++;
-}else{
-    alert("Вы не угадали.")
-}
+    ridless("Кто грызёт на ветке шишку?\nНу, конечно, это ... ", ['Белка', 'белка', 'белочка', 'Белочка']);
 
-var userAnswer = prompt("Отгадайте ещё одну загадку.\n\nКукарекает спросонок\nМилый, добрый ... ");
+    ridless("Ночью каждое оконце\nСлабо освещает ... ", ['луна', 'Луна']);
 
-if(userAnswer === 'петух' || userAnswer === 'Петух'){
-alert("Поздравляем, вы угадали!")
-countCorrectAnswer++;
-}else{
-    alert("Вы не угадали.")
-}
+    ridless("Кукарекает спросонок\nМилый, добрый ... ", ['петух', 'Петух']);
 
-var userAnswer = prompt("Отгадайте ещё одну загадку.\n\nПо волнам дворец плывет,\nНа себе людей везет.");
+    ridless("По волнам дворец плывет,\nНа себе людей везет.", ['Корабль', 'теплоход', 'корабль', 'Теплоход']);
 
-if(userAnswer === 'Корабль' || userAnswer === 'корабль' || userAnswer === 'теплоход' || userAnswer === 'Теплоход'){
-alert("Поздравляем, вы угадали!")
-countCorrectAnswer++;
-}else{
-    alert("Вы не угадали.")
-}
-
-alert("Игра окончена. Количество правильных ответов: " + countCorrectAnswer)
+    alert("Игра окончена. Количество правильных ответов: " + countCorrectAnswer)
 
 
-        </script>
+</script>
