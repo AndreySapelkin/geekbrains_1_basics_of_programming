@@ -1,7 +1,7 @@
 <meta charset="uft-8">
 <script type="text/javascript">
 
-    /*//Задание 1.a
+    //Задание 1.a
     function arrFunction(n) {
         var arrN = [];
         for (var i = 1; i <= n; i++) {
@@ -10,7 +10,8 @@
         return arrN;
     }
 
-    alert("Задание 1.a. Массив из N элементов: " + arrFunction(+prompt("Задание 1.а Введите число n")));
+    alert("Задание 1.a. Массив из N элементов: " + arrFunction(+prompt("Задание 1.а Получение массива из N элементов." +
+        " Введите число n")));
 
     //Задание 1.b
 
@@ -28,7 +29,7 @@
     var arrUserB = [];
 
     do {
-     var userNumber =  prompt("Задание 1.b Введите массив чисел. В конце массива, введите end");
+     var userNumber =  prompt("Задание 1.b Сумма элементов массива. Введите массив чисел. В конце массива, введите end");
     if(userNumber === "end"){
           break;
       }
@@ -41,11 +42,11 @@
 
     }
 
-    alert("Задание 1.b. Сумма массива равна: " + sumArr(arrUserB));*/
+    alert("Задание 1.b. Сумма элементов массива равна: " + sumArr(arrUserB));
 
     //Задание 1.c
 
-    /*function searchMax(arrUserC) {
+    function searchMax(arrUserC) {
 
         var max = 0;
 
@@ -61,7 +62,8 @@
     var arrUserC = [];
 
     do {
-        var userNumber = prompt("Задание 1.c Введите массив чисел. В конце массива, введите end");
+        var userNumber = prompt("Задание 1.c Поиск максимального целого числа в массиве. " +
+            "Введите массив чисел. В конце массива, введите end");
         if (userNumber === "end") {
             break;
         } else {
@@ -74,9 +76,9 @@
 
     }
 
-    alert("Задание 1.c. Максимальное, целое число в массиве: " + searchMax(arrUserC));*/
+    alert("Задание 1.c. Максимальное, целое число в массиве: " + searchMax(arrUserC));
 
-    //Задание 1.d
+   //Задание 1.d
 
     function searchMin(arrUserD) {
 
@@ -95,7 +97,8 @@
 
     var userNumber;
     do {
-        userNumber = prompt("Задание 1.d Введите массив чисел. В конце массива, введите end");
+        userNumber = prompt("Задание 1.d Поиск минимального целого числа в массиве." +
+            " Введите массив чисел. В конце массива, введите end");
         if (userNumber === "end") {
             break;
         } else {
@@ -108,7 +111,41 @@
 
     }
 
-    alert("Задание 1.c. Минимальное, целое число в массиве: " + searchMin(arrUserD));
+    alert("Задание 1.d. Минимальное, целое число в массиве: " + searchMin(arrUserD));
+
+    //Задание 1.f
+
+    function evenNumber(arrUserD) {
+
+      var evenArr = [];
+        for (var i = 0; i <= arrUserD.length - 1; i++) {
+            if(arrUserD[i] % 2 === 0 ){
+                evenArr.push(arrUserD[i]);
+            }
+        }
+        return evenArr;
+    }
+
+    i = 0;
+    var arrUserF = [];
+
+    var userNumber;
+    do {
+        userNumber = prompt("Задание 1.f Получение четных чисел из массива." +
+            " Введите массив чисел. В конце массива, введите end");
+        if (userNumber === "end") {
+            break;
+        } else {
+            arrUserF.push(parseInt(userNumber));
+            i++;
+        }
+    }
+    while (true)
+    {
+
+    }
+
+    alert("Задание 1.f. Массив четных чисел: " + evenNumber(arrUserF));
 
 
 </script>
