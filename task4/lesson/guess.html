@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Личный сайт студента GeekBrains</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+
+		var answer = parseInt(Math.random() * 100);
+		var tryCount1 = 0;
+		var tryCount2 = 0;
+		var maxTryCount = 3;
+
+		function readInt1(){
+			return +document.getElementById("userAnswer1").value;
+		}
+		function readInt2(){
+			return +document.getElementById("userAnswer2").value;
+		}
+
+		function write1(text){
+			document.getElementById("info1").innerHTML = text;
+		}
+
+		function write2(text){
+			document.getElementById("info2").innerHTML = text;
+		}
+
+		function hide(id){
+			document.getElementById(id).style.display = "none";
+		}
+
+		function guess1(){
+			tryCount1++;
+
+			var userAnswer1 = readInt1();
+			if(userAnswer1 === answer){
+				write1("<b>Поздравляем, первый игрок выиграл!</b>");
+				hide("button");
+				hide("userAnswer1");
+			} else if(tryCount1 >= maxTryCount){
+				write1("Игрок номер 1 не угадал число за 3 попытки.");
+				hide("button1");
+				hide("userAnswer1");
+			} else if(userAnswer1 > answer){
+				write1("Вы ввели слишком большое число<br>Попробуйте еще раз. Введите число от 1 до 100");
+			} else if(userAnswer1 < answer){
+				write1("Вы ввели слишком маленькое число<br>Попробуйте еще раз. Введите число от 1 до 100");
+			}
+		}
+
+		function guess2(){
+			tryCount2++;
+
+			var userAnswer2 = readInt2();
+			if(userAnswer2 === answer){
+				write2("<b>Поздравляем, второй игрок выиграл!</b>");
+				hide("button");
+				hide("userAnswer2");
+			} else if(tryCount2 >= maxTryCount){
+				write2("Игрок номер 2 не угадал число за 3 попытки. <br><br><br><br> Правильный ответ: " + answer);
+				hide("button2");
+				hide("userAnswer2");
+			} else if(userAnswer2 > answer){
+				write2("Вы ввели слишком большое число<br>Попробуйте еще раз. Введите число от 1 до 100");
+			} else if(userAnswer2 < answer){
+				write2("Вы ввели слишком маленькое число<br>Попробуйте еще раз. Введите число от 1 до 100");
+			}
+		}
+
+	</script>
+</head>
+<body>
+
+<div class="content">
+	<div class="header">
+		<a href="index.html">Главная</a>
+		<a href="puzzle.html">Загадки</a>
+		<a href="guess.html">Угадайка</a>
+		<a href="genpass.html">Генератор паролей</a>
+	</div>
+
+<div class="contentWrap">
+    <div class="content">
+        <div class="center">
+
+			<h1>Игра угадайка</h1>
+
+			<div class="box">
+
+				<p id="info1">Угадайте число от 0 до 100 с трёх попыток.<br>Игрок 1</p>
+				<input type="text" id="userAnswer1">
+				<br>
+				<a href="#" onClick="guess1();" id="button1">Начать</a>
+
+				<p id="info2">Угадайте число от 0 до 100 с трёх попыток.<br>Игрок 2</p>
+				<input type="text" id="userAnswer2">
+				<br>
+				<a href="#" onClick="guess2();" id="button2">Начать</a>
+			</div>
+
+        </div>
+    </div>
+</div>
+
+	
+
+</div>
+<div class="footer">
+	Copyright &copy; Andrey
+<div>
+
+</body>
+</html>
